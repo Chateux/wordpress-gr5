@@ -57,3 +57,10 @@ function custom_post_type() {
             'public' => true
         ]);
 }
+
+/* Custom widget - Nouvelles recettes */
+add_action('widgets_init', 'theme_register_widgets');
+
+function theme_register_widgets() {
+    register_widget('BestRecipes');
+}
