@@ -1,1 +1,8 @@
-# wordpress-gr5
+# WORDPRESS - GROUPE 5
+
+DEVELOPERS :
+
+ - Samuel
+ - Onésie
+ - Adrien
+ - Yann 
