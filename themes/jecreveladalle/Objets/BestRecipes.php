@@ -1,4 +1,5 @@
 <?php
+/*
 class BestRecipes extends WP_Widget {
 	function BestRecipes() {
 		// Instantate the parent boject
@@ -15,4 +16,4 @@ class BestRecipes extends WP_Widget {
 	function form($d) {
 		// Output admin widget options from
 	}
-}
+}*/
