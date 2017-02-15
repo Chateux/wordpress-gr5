@@ -85,13 +85,6 @@ function custom_post_type()
     register_post_type('Recettes',$args);
 }
 
-/* Custom widget - Nouvelles recettes */
-add_action('widgets_init', 'theme_register_widgets');
-
-function theme_register_widgets()
-{
-    //register_widget('BestRecipes');
-}
 
 /* Admin options */
 /*
