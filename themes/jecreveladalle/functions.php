@@ -1,4 +1,8 @@
 <?php
+include 'Objets/MyCustomizer.class.php';
+include 'Objets/StormTwitter.class.php';
+
+
 /* Enqueue Styles and Scripts */
 function my_scripts_styles()
 {
@@ -65,8 +69,28 @@ function wpb_change_title_text( $title ){
 
 add_filter( 'enter_title_here', 'wpb_change_title_text' );
 
+add_action ('admin_menu', 'my_theme_customizer');
+function my_theme_customizer() {
+    add_theme_page(
+        __( 'Customize Theme Options', THEMENAME ),
+        __( 'Customize Theme', THEMENAME ),
+        'edit_theme_options',
+        'customize.php'
+    );
+}
 
+function getTweets($username = false, $count = 10, $options = false) {
+    $config['key'] = get_theme_mod( 'twitter_consumer_key' );
+    $config['secret'] = get_theme_mod( 'twitter_consumer_secret' );
+    $config['token'] = get_theme_mod( 'twitter_access_token' );
+    $config['token_secret'] = get_theme_mod( 'twitter_access_token_secret' );
+    $config['screenname'] = $username;
 
+    $obj = new StormTwitter($config);
+    $res = $obj->getTweets($username, $count, $options);
+    update_option('tdf_last_error',$obj->st_last_error);
+    return $res;
+}
 
 
 
