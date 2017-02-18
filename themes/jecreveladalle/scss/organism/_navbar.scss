@@ -15,23 +15,6 @@
 
     .form-group{
       height: 64px;
-
-      input{
-        height: 100%;
-        width: 350px;
-        border: none;
-        border-left: .1em solid #e0e0e0;
-        border-radius: 0;
-        font-size: 1.2em;
-        outline: none !important;
-        box-shadow: none;
-        font-weight: bold;
-
-        &:active,&:focus{
-          box-shadow: none;
-          outline: none !important;
-        }
-      }
     }
   }
 }

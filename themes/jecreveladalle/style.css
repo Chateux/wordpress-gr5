@@ -5813,8 +5813,41 @@ html {
 a:hover, a:active, a:focus {
   text-decoration: none !important; }
 
+button:hover, button:focus, button:active {
+  outline: none; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Francois One", sans-serif; }
+
+.txt-center {
+  text-align: center; }
+
+.txt-right {
+  text-align: right; }
+
+.fa-star, .fa-star-o {
+  color: #ffb500; }
+
+.search-bar {
+  padding-left: 1em;
+  border-left: .1em solid #e0e0e0;
+  color: #9c9c9c; }
+  .search-bar button {
+    background: none;
+    border: none; }
+  .search-bar input {
+    padding-left: 0;
+    height: 100%;
+    width: 350px;
+    border: none;
+    border-radius: 0;
+    font-size: 1.2em;
+    outline: none !important;
+    box-shadow: none;
+    font-weight: bold; }
+    .search-bar input:active, .search-bar input:focus {
+      box-shadow: none;
+      outline: none !important; }
 
 .navbar {
   margin-bottom: 0;
@@ -5828,19 +5861,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0; }
     .navbar .navbar-form .form-group {
       height: 64px; }
-      .navbar .navbar-form .form-group input {
-        height: 100%;
-        width: 350px;
-        border: none;
-        border-left: .1em solid #e0e0e0;
-        border-radius: 0;
-        font-size: 1.2em;
-        outline: none !important;
-        box-shadow: none;
-        font-weight: bold; }
-        .navbar .navbar-form .form-group input:active, .navbar .navbar-form .form-group input:focus {
-          box-shadow: none;
-          outline: none !important; }
 
 @media (max-width: 942px) {
   .navbar-collapse.collapse {
@@ -5854,9 +5874,14 @@ h1, h2, h3, h4, h5, h6 {
     float: none;
     margin-right: 0; } }
 .carousel {
-  max-height: 70vh;
+  height: 30vh;
   overflow: hidden;
   margin-bottom: 2em; }
+  .carousel img {
+    width: 100%; }
+  @media screen and (min-width: 500px) {
+    .carousel {
+      height: 50vh; } }
 
 .thumbnail {
   padding: 0;
@@ -5867,8 +5892,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden; }
     .thumbnail .img .wp-post-image {
       width: 100%;
-      height: auto;
-      transform: translateY(-20%); }
+      height: auto; }
   .thumbnail .caption h3 {
     text-align: center; }
   .thumbnail .pannel-footer {
@@ -5879,5 +5903,23 @@ h1, h2, h3, h4, h5, h6 {
   .thumbnail:hover {
     box-shadow: 0px 1px 10px -1px #656565;
     border: none; }
+
+article.recipe {
+  margin-top: -105px;
+  background: white; }
+  article.recipe .title {
+    background: #e05b5b;
+    color: white;
+    padding: 1.2em 1em; }
+  article.recipe .content {
+    padding: 0 4em; }
+    article.recipe .content .short-desc {
+      border-bottom: 2px dotted #e6e6e6;
+      padding: 1em 0;
+      margin-bottom: 1em; }
+    article.recipe .content .desc li {
+      list-style-type: none; }
+      article.recipe .content .desc li h2 {
+        color: #e05b5b; }
 
 /*# sourceMappingURL=style.css.map */

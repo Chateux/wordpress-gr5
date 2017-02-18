@@ -8,3 +8,9 @@ a{
 
   }
 }
+
+button{
+  &:hover, &:focus, &:active{
+    outline: none;
+  }
+}
