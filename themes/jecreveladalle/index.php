@@ -2,7 +2,6 @@
 
 get_header();
 
-
 echo "<h2> Widgets Zone</h2>";
 get_sidebar( 'right' );
 
@@ -24,6 +23,7 @@ while ( $loop->have_posts() ) : $loop->the_post();
     echo '</div>';
 endwhile;
 */
+
 get_footer();
 
 ?>
