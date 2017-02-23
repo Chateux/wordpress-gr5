@@ -4,7 +4,6 @@ get_header();
 
 echo "<h2> Widgets Zone</h2>";
 get_sidebar( 'right' );
- 
 /*
 if (have_posts()) {
     while (have_posts()) {
@@ -14,7 +13,7 @@ if (have_posts()) {
     }
 } else {
     echo "Aucun articles ...";
-}
+} 
 $loop = new WP_Query( array( 'post_type' => 'Evenement', 'posts_per_page' => 10 ) );
 while ( $loop->have_posts() ) : $loop->the_post();
     the_title();
@@ -23,7 +22,6 @@ while ( $loop->have_posts() ) : $loop->the_post();
     echo '</div>';
 endwhile;
 */
-
 
 get_footer();
 
