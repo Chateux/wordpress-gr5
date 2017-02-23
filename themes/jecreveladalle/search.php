@@ -4,7 +4,7 @@
         <div id="content">
 
             <?php
-            if (have_posts() && !empty(trim($_GET['s']))) :
+            if (have_posts()) :
             ?>
 
                 <h2>Resultat pour la recherche : <?php the_search_query(); ?></h2>
