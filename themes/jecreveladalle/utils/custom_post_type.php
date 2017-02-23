@@ -18,7 +18,7 @@ function custom_post_type()
     );
     $argsReceips = array(
         'labels'              => $labelsReceips,
-        'supports'            => array('title', 'thumbnail', 'editor', 'author', 'trackbacks', 'post-formats' ), // Permet de définir les éléments à ajouter pour notre type de contenu.
+        'supports'            => array('title', 'thumbnail', 'post-formats' ), // Permet de définir les éléments à ajouter pour notre type de contenu.
         'taxonomies'          => array( 'category' ),
         'public'              => true,
         'show_ui'             => true,
@@ -80,7 +80,7 @@ function custom_post_type()
     );
     $argsVideos = array(
         'labels'              => $labelsVideos,
-        'supports'            => array('title', 'title', 'thumbnail', 'editor', 'author', 'post-formats' ), // Permet de définir les éléments à ajouter pour notre type de contenu.
+        'supports'            => array('title', 'thumbnail'), // Permet de définir les éléments à ajouter pour notre type de contenu.
         'taxonomies'          => array( 'category' ),
         'public'              => true,
         'show_ui'             => true,

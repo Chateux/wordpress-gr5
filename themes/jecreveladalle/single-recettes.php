@@ -15,12 +15,21 @@
 								<div class="col-md-4">
 									<i class="fa fa-clock-o" aria-hidden="true"></i>
 									Cooking time :
-									<strong>15 min</strong>
+									<strong><?php if( get_post_meta( $post->ID, 'time_todo', true ) ) {
+                                            echo get_post_meta( $post->ID, 'time_todo', true ) ;
+                                        }
+                                        ?></strong>
 								</div>
 								<div class="col-md-4 txt-center">
 									<i class="fa fa-clock-o" aria-hidden="true"></i>
 									Difficulté :
-									<strong>1/5 ~ Easy</strong>
+                                    <?php
+                                    ?>
+									<strong><?php if( get_post_meta( $post->ID, 'rate_level', true ) ) {
+                                                    echo get_post_meta( $post->ID, 'rate_level', true ) ;
+                                                 }
+                                             ?>/5
+                                    </strong>
 								</div>
 								<div class="col-md-4 txt-right">
 									<i class="fa fa-star" aria-hidden="true"></i>
@@ -31,12 +40,39 @@
 								</div>
 							</div>
 							<div class="desc">
-								<?php the_content(); ?>
+                                <?php if( get_post_meta( $post->ID, 'receipes', true ) ) {
+                                        echo nl2br(get_post_meta( $post->ID, 'receipes', true )) ;
+                                    }
+                                    ?>
+                                <hr>
+                                <?php if( get_post_meta( $post->ID, 'ingredient', true ) ) {
+                                    echo nl2br(get_post_meta( $post->ID, 'ingredient', true )) ;
+                                }
+                                ?>
 							</div>
 						</div>
 					</article>
 
+
 				<?php endwhile; ?>
+                <br><br><br><br>
+                <hr><br><br><br><br><br>
+                <article class="recipe">
+                    <h1 class="title">
+                       Ajouter un commentaire
+                    </h1>
+
+                    <div class="content">
+                        <div class="desc">
+                            <?php
+
+                                comment_form();
+                            ?>
+                        </div>
+                    </div>
+                </article>
+
+                <hr><br><br><br><br><br>
 			<?php endif; ?>
 		</div>
 	</div>
