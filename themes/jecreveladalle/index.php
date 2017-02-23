@@ -14,7 +14,7 @@ if (have_posts()) {
     }
 } else {
     echo "Aucun articles ...";
-}
+} 
 $loop = new WP_Query( array( 'post_type' => 'Evenement', 'posts_per_page' => 10 ) );
 while ( $loop->have_posts() ) : $loop->the_post();
     the_title();
