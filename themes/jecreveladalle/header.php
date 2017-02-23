@@ -24,12 +24,11 @@
         </div>
 
         <div class="collapse navbar-collapse">
-            <form class="navbar-form navbar-left">
-                <div class="form-group search-bar">
-                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    <input type="search" class="form-control" placeholder="Search">
-                </div>
-            </form>
+
+                    <?php
+                    get_search_form();
+                    ?>
+
 
             <?php wp_nav_menu( array( 'theme_location' => 'main_menu', 'menu_class' => 'nav navbar-nav navbar-right' ) ); ?>
 
