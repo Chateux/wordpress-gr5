@@ -1,0 +1,38 @@
+.events{
+  article{
+    height: 50vh;
+
+    .thumbnail{
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      .img{
+        height: auto;
+
+        .overflow{
+          background: rgba(0, 0, 0, 0.5);
+          height: 100%;
+          width: 100%;
+          z-index: 1;
+          display: block;
+          position: absolute;
+
+          &:hover{
+            background: rgba(0, 0, 0, 0.6);
+          }
+        }
+        img{
+          transform: translateY(-30%);
+        }
+      }
+      .caption{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        color: white;
+        z-index:2;
+      }
+    }
+  }
+}

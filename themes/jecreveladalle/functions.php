@@ -1,4 +1,8 @@
 <?php
+include 'Objets/MyCustomizer.class.php';
+include 'Objets/StormTwitter.class.php';
+
+
 /* Enqueue Styles and Scripts */
 function my_scripts_styles()
 {
@@ -89,6 +93,7 @@ function receipes_render_metabox()
     </div>
     <?php
 }
+
 function receipes_save_meta($post_id)
 {
     $valuePost = $_POST['receipes'];
@@ -131,6 +136,7 @@ function ingredient_render_metabox()
     </div>
     <?php
 }
+
 function ingredient_save_meta($post_id)
 {
     $valuePost = $_POST['ingredient'];
@@ -148,8 +154,34 @@ function ingredient_save_meta($post_id)
     } else {
         add_post_meta($post_id, 'ingredient', $valuePost);
     }
+    add_action('admin_menu', 'my_theme_customizer');
+
 }
 
+function my_theme_customizer()
+{
+    add_theme_page(
+        __('Customize Theme Options', THEMENAME),
+        __('Customize Theme', THEMENAME),
+        'edit_theme_options',
+        'customize.php'
+    );
+}
+
+
+function getTweets($username = false, $count = 10, $options = false)
+{
+    $config['key'] = get_theme_mod('twitter_consumer_key');
+    $config['secret'] = get_theme_mod('twitter_consumer_secret');
+    $config['token'] = get_theme_mod('twitter_access_token');
+    $config['token_secret'] = get_theme_mod('twitter_access_token_secret');
+    $config['screenname'] = $username;
+
+    $obj = new StormTwitter($config);
+    $res = $obj->getTweets($username, $count, $options);
+    update_option('tdf_last_error', $obj->st_last_error);
+    return $res;
+}
 
 /// RATE
 add_action('admin_init', 'rate_init_meta');
@@ -250,12 +282,6 @@ function time_save_meta($post_id)
         add_post_meta($post_id, 'time_todo', $valuePost);
     }
 }
-
-
-
-
-
-
 
 
 ////////////////////////////// VIDEOS

@@ -1,10 +1,12 @@
 <?php get_header(); ?>
+<?php if (have_posts()) : ?>
+<?php while (have_posts()) : the_post(); ?>
+<div class="background" style="background-image:url('<?php the_post_thumbnail_url() ?>');"></div>
 
 <div class="container">
     <div class="row">
         <div class="col-md-9">
-            <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
+
                     <article class="recipe">
                         <h1 class="title">
                             <?php the_title(); ?>
@@ -74,6 +76,9 @@
 
                 <hr><br><br><br><br><br>
             <?php endif; ?>
+        </div>
+        <div class="col-md-3 twitter-feed">
+            <?php get_sidebar( 'right' ); ?>
         </div>
     </div>
 </div>

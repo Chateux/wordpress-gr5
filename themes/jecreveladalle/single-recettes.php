@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div class="background" style="background-image:url('<?php the_post_thumbnail_url() ?>');"></div>
+
 <div class="container">
 	<div class="row">
 		<div class="col-md-9">
@@ -21,7 +23,7 @@
                                         ?></strong>
 								</div>
 								<div class="col-md-4 txt-center">
-									<i class="fa fa-clock-o" aria-hidden="true"></i>
+									<i class="fa fa-thermometer-half" aria-hidden="true"></i>
 									Difficulté :
                                     <?php
                                     ?>
@@ -32,11 +34,8 @@
                                     </strong>
 								</div>
 								<div class="col-md-4 txt-right">
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
+									<?php echo $post->likes; ?> Likes
+									<a href='/wordpress/add_vote.php?id=<?php echo $post->ID; ?>'> Liker cette recette</a>
 								</div>
 							</div>
 							<div class="desc">
@@ -55,12 +54,10 @@
 
 
 				<?php endwhile; ?>
-                <br><br><br><br>
-                <hr><br><br><br><br><br>
-                <article class="recipe">
-                    <h1 class="title">
+                <div class="comments">
+                    <h3 class="title">
                        Ajouter un commentaire
-                    </h1>
+                    </h3>
 
                     <div class="content">
                         <div class="desc">
@@ -70,10 +67,14 @@
                             ?>
                         </div>
                     </div>
-                </article>
+                </div>
 
                 <hr><br><br><br><br><br>
 			<?php endif; ?>
+		</div>
+
+		<div class="col-md-3 twitter-feed">
+			<?php get_sidebar( 'right' ); ?>
 		</div>
 	</div>
 </div>
