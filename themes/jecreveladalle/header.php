@@ -24,46 +24,14 @@
         </div>
 
         <div class="collapse navbar-collapse">
-            <form class="navbar-form navbar-left">
-                <div class="form-group search-bar">
-                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    <input type="search" class="form-control" placeholder="Search">
-                </div>
-            </form>
+<!---->
+<!--                    --><?php
+//                    get_search_form();
+//                    ?>
+
 
             <?php wp_nav_menu( array( 'theme_location' => 'main_menu', 'menu_class' => 'nav navbar-nav navbar-right' ) ); ?>
 
         </div>
     </div>
 </nav>
-
-<?php
-
-$loop = new WP_Query( array( 'post_type' => 'Evenement', 'posts_per_page' => 4 ) );
-
-?>
-<div class="carousel slide" data-ride="carousel">
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-        <?php
-        $first = true;
-        while ( $loop->have_posts() ) : $loop->the_post();
-        ?>
-
-        <?php if($first) { ?>
-        <div class="item active">
-            <?php $first = false; } else { ?>
-            <div class="item">
-                <?php } ?>
-
-                <?php the_post_thumbnail(); ?>
-                <div class="carousel-caption">
-                    <?php the_title(); ?>
-                </div>
-            </div>
-            <?php
-            endwhile;
-            ?>
-        </div>
-    </div>
-</div>
