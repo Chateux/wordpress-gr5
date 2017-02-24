@@ -2,18 +2,12 @@
 
 get_header();
 
-if (have_posts()) {
-    while (have_posts()) {
-        the_post();
-        the_title();
-        the_content();
-    }
-} else {
-    echo "Aucun articles ...";
-}
-$loop = new WP_Query( array( 'post_type' => 'Evenement', 'posts_per_page' => 10 ) );
+$loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 10 ) );
+
 while ( $loop->have_posts() ) : $loop->the_post();
     the_title();
+    echo "J'ai ".$post->likes."!";
+    echo "<a href='add_vote.php?id=".$post->ID."'> Liker cette recette</a>";
     echo '<div>';
     the_content();
     echo '</div>';
