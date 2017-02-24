@@ -92,8 +92,6 @@ function getTweets($username = false, $count = 10, $options = false) {
     return $res;
 }
 
-
-
 function theme_register_widgets()
 {
     //register_widget('BestRecipes');
