@@ -19,7 +19,7 @@ class BestRecipes_Widget extends WP_widget {
         echo $args['before_title'] . $d['nb_recipes'] . ' ' . $d['title'] . $args['after_title'];
 
         global $wpdb;
-        $posts = $wpdb->get_results("SELECT guid,post_title,likes FROM {$wpdb->prefix}posts WHERE post_type = 'post' AND post_parent = 0 AND ping_status = 'open' AND post_status = 'publish' ORDER BY likes DESC LIMIT ".$d['nb_recipes']." ") ;
+        $posts = $wpdb->get_results("SELECT guid,post_title,likes FROM {$wpdb->prefix}posts WHERE post_type = 'recettes' AND post_parent = 0 AND ping_status = 'closed' AND post_status = 'publish' ORDER BY likes DESC LIMIT ".$d['nb_recipes']." ") ;
 
         if ($posts) {
             echo '<ol>';

@@ -7,7 +7,7 @@
  * Author: NeverTwice
  */
 
-$sql = "CREATE TABLE jcld_posts (
+$sql = "CREATE TABLE wp_posts (
          likes int unsigned NOT NULL DEFAULT 0
          )";
 dbDelta($sql);

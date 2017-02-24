@@ -121,9 +121,9 @@ class TwitterFeed_Widget extends WP_Widget
                             <a href="https://twitter.com/YOURUSERNAME/status/'.$tweet['id_str'].'" target="_blank">
                                 '.date('H:i - d M y',strtotime($tweet['created_at']. '- 8 hours')).'
                             </a>
-                            <a class="reply" href="https://twitter.com/intent/tweet?in_reply_to='.$tweet['id_str'].'"><img style="margin-left : 15px" width="17" src="wp-content/themes/jecreveladalle/img/reply.png"></a>
-                            <a class="retweet" href="https://twitter.com/intent/retweet?tweet_id='.$tweet['id_str'].'"><img style="margin-left : 15px" width="17" src="wp-content/themes/jecreveladalle/img/retweet.png"></a>
-                            <a class="favorite" href="https://twitter.com/intent/favorite?tweet_id='.$tweet['id_str'].'"><img style="margin-left : 15px" width="17" src="wp-content/themes/jecreveladalle/img/like.png"></a></p>
+                            <a class="reply" href="https://twitter.com/intent/tweet?in_reply_to='.$tweet['id_str'].'"><img style="margin-left : 15px" width="17" src="/wordpress/wp-content/themes/jecreveladalle/img/reply.png"></a>
+                            <a class="retweet" href="https://twitter.com/intent/retweet?tweet_id='.$tweet['id_str'].'"><img style="margin-left : 15px" width="17" src="/wordpress/wp-content/themes/jecreveladalle/img/retweet.png"></a>
+                            <a class="favorite" href="https://twitter.com/intent/favorite?tweet_id='.$tweet['id_str'].'"><img style="margin-left : 15px" width="17" src="/wordpress/wp-content/themes/jecreveladalle/img/like.png"></a></p>
                         </div>';
 
 

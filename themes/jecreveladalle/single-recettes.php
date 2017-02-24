@@ -34,7 +34,7 @@
                                     </strong>
 								</div>
 								<div class="col-md-4 txt-right">
-									J'ai <?php $post->likes; ?> Likes !
+									<?php echo $post->likes; ?> Likes
 									<a href='/wordpress/add_vote.php?id=<?php echo $post->ID; ?>'> Liker cette recette</a>
 								</div>
 							</div>
