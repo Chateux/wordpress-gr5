@@ -24,9 +24,9 @@ class TwitterFeed_Widget extends WP_Widget
     function form($instance)
     {
         $defaults = array(
-            'title' => '',
+            'title' => 'Notre Actu Twitter',
             'limit' => 5,
-            'username' => 'bonsaished'
+            'username' => 'tasty_chef'
         );
         $values = wp_parse_args($instance, $defaults);
         ?>
