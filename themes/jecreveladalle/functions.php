@@ -65,11 +65,6 @@ function wpb_change_title_text( $title ){
 
 add_filter( 'enter_title_here', 'wpb_change_title_text' );
 
-
-
-
-
-
 function theme_register_widgets()
 {
     //register_widget('BestRecipes');
