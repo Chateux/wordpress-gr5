@@ -1,0 +1,26 @@
+.search-bar{
+  padding-left: 1em;
+  border-left: .1em solid #e0e0e0;
+  color: $color-form;
+
+  button{
+    background: none;
+    border: none;
+  }
+  input{
+    padding-left: 0;
+    height: 100%;
+    width: 350px;
+    border: none;
+    border-radius: 0;
+    font-size: 1.2em;
+    outline: none !important;
+    box-shadow: none;
+    font-weight: bold;
+
+    &:active,&:focus{
+      box-shadow: none;
+      outline: none !important;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.recipes{
+  .content{
+    text-align: center;
+
+    article{
+      height: 255px;
+      width: 255px;
+      margin: 1em;
+      display: inline-block;
+
+      a{
+        height: 255px !important;
+
+        .thumbnail{
+          height: 255px;
+          width: 255px;
+          display: block;
+          margin: 0;
+
+          .img{
+            height: 255px;
+
+            img{
+              height: 100%;
+              width: auto;
+              transform: translateX(-25%);
+            }
+          }
+          .caption{
+            width: 100%;
+            background: none;
+
+            h3{
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
