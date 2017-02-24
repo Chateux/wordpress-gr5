@@ -31,6 +31,9 @@
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
+        <div class="col-md-3">
+            <?php get_sidebar( 'right' ); ?>
+        </div>
     </div>
 </div>
 

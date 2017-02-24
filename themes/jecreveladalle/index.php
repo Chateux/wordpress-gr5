@@ -6,6 +6,8 @@ $loop = new WP_Query( array( 'post_type' => 'Recettes', 'posts_per_page' => 10 )
 
 ?>
 
+    <div class="background"></div>
+
     <div class="container">
         <div class="row">
         <h2>What to Cook This Week</h2>
