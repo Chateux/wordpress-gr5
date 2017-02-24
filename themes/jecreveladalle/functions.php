@@ -183,7 +183,6 @@ function getTweets($username = false, $count = 10, $options = false)
     return $res;
 }
 
-
 /// RATE
 add_action('admin_init', 'rate_init_meta');
 add_action('save_post', 'rate_save_meta');

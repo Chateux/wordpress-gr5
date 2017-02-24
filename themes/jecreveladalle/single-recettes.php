@@ -34,11 +34,8 @@
                                     </strong>
 								</div>
 								<div class="col-md-4 txt-right">
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
+									J'ai <?php $post->likes; ?> Likes !
+									<a href='/wordpress/add_vote.php?id=<?php echo $post->ID; ?>'> Liker cette recette</a>
 								</div>
 							</div>
 							<div class="desc">
