@@ -1,0 +1,28 @@
+article.recipe{
+  margin-top: -105px;
+  background: white;
+
+  .title{
+    background: $app-color;
+    color: white;
+    padding: 1.2em 1em;
+  }
+  .content{
+    padding: 0 4em;
+
+    .short-desc{
+      border-bottom: 2px dotted $border-color;
+      padding: 1em 0;
+      margin-bottom: 1em;
+    }
+    .desc{
+      li{
+        list-style-type: none;
+
+        h2{
+          color: $app-color;
+        }
+      }
+    }
+  }
+}

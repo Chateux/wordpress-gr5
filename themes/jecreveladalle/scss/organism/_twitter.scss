@@ -1,0 +1,16 @@
+.twitter-feed{
+  background: white;
+
+  #sidebar{
+    ul{
+      list-style-type: none !important;
+      padding-left: 0;
+
+      .twitter_intents{
+        p{
+          display: inline-flex;
+        }
+      }
+    }
+  }
+}

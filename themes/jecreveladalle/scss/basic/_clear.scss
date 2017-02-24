@@ -1,0 +1,16 @@
+html {
+  margin: 0 !important;
+}
+
+a{
+  &:hover, &:active, &:focus{
+    text-decoration: none !important;
+
+  }
+}
+
+button{
+  &:hover, &:focus, &:active{
+    outline: none;
+  }
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Francois+One');
+
+$font-family :'Francois One', sans-serif;
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $font-family;
+}
+
+.txt-center{
+  text-align: center;
+}
+
+.txt-right{
+  text-align: right;
+}
+
+.fa-star, .fa-star-o{
+  color: #ffb500;
+}
