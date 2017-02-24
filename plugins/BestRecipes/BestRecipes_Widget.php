@@ -18,12 +18,18 @@ class BestRecipes_Widget extends WP_widget {
         echo $args['before_widget'];
         echo $args['before_title'] . $d['nb_recipes'] . ' ' . $d['title'] . $args['after_title'];
 
-        if (have_posts()) {
+        $args = array(
+            'offset'           => 5,
+            'orderby'          => 'likes',
+            'order'            => 'DESC',
+            'post_type'        => 'post');
+
+        if ($posts = get_post($args)) {
             echo '<ol>';
-            for($i = 0; $i < $d['nb_recipes']; $i++) {
-                the_post();
-                echo '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
-            }
+                foreach ($posts as $post) {
+                    the_post();
+                    echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+                }
             echo '</ol>';
         }
         echo $args['after_widget'];
