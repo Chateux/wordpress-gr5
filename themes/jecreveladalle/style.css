@@ -5862,7 +5862,7 @@ h1, h2, h3, h4, h5, h6 {
     .navbar .navbar-form .form-group {
       height: 64px; }
 
-@media (max-width: 942px) {
+@media (max-width: 1090px) {
   .navbar-collapse.collapse {
     display: none !important; }
 
@@ -5873,14 +5873,16 @@ h1, h2, h3, h4, h5, h6 {
   .navbar-header {
     float: none;
     margin-right: 0; } }
-.carousel {
+.background {
   height: 30vh;
   overflow: hidden;
-  margin-bottom: 2em; }
-  .carousel img {
+  margin-bottom: 2em;
+  background: url("img/1_food.jpg");
+  background-size: cover; }
+  .background img {
     width: 100%; }
   @media screen and (min-width: 500px) {
-    .carousel {
+    .background {
       height: 50vh; } }
 
 .thumbnail {
@@ -5921,5 +5923,78 @@ article.recipe {
       list-style-type: none; }
       article.recipe .content .desc li h2 {
         color: #e05b5b; }
+
+.recipes .content {
+  text-align: center; }
+  .recipes .content article {
+    height: 255px;
+    width: 255px;
+    margin: 1em;
+    display: inline-block; }
+    .recipes .content article a {
+      height: 255px !important; }
+      .recipes .content article a .thumbnail {
+        height: 255px;
+        width: 255px;
+        display: block;
+        margin: 0; }
+        .recipes .content article a .thumbnail .img {
+          height: 255px; }
+          .recipes .content article a .thumbnail .img img {
+            height: 100%;
+            width: auto;
+            transform: translateX(-25%); }
+        .recipes .content article a .thumbnail .caption {
+          width: 100%;
+          background: none; }
+          .recipes .content article a .thumbnail .caption h3 {
+            margin: 0; }
+
+.events article {
+  height: 50vh; }
+  .events article .thumbnail {
+    height: 100%;
+    position: relative;
+    overflow: hidden; }
+    .events article .thumbnail .img {
+      height: auto; }
+      .events article .thumbnail .img .overflow {
+        background: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        display: block;
+        position: absolute; }
+        .events article .thumbnail .img .overflow:hover {
+          background: rgba(0, 0, 0, 0.6); }
+      .events article .thumbnail .img img {
+        transform: translateY(-30%); }
+    .events article .thumbnail .caption {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      color: white;
+      z-index: 2; }
+
+.video {
+  background: white;
+  margin-top: 1em;
+  padding: 1em; }
+  .video .content {
+    border-right: 1px solid #cacaca; }
+
+.twitter-feed {
+  background: white; }
+  .twitter-feed #sidebar ul {
+    list-style-type: none !important;
+    padding-left: 0; }
+    .twitter-feed #sidebar ul .twitter_intents p {
+      display: inline-flex; }
+
+footer {
+  width: 100%;
+  background: white;
+  padding: 1em;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

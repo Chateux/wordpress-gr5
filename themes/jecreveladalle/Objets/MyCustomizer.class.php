@@ -66,4 +66,3 @@ class MyCustomizer {
     }
 }
 add_action( 'customize_register' , array( 'MyCustomizer' , 'register' ) );
-?>

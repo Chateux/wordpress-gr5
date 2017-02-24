@@ -1,26 +1,30 @@
-<?php //get_header(); ?>
-<!---->
-<!--<div class="recipes">-->
-<!---->
-<!--    --><?php //if (have_posts()) : ?>
-<!--        --><?php //while (have_posts()) : the_post(); ?>
-<!---->
-<!--            <article class="thumbnail">-->
-<!---->
-<!--                <div class="caption">-->
-<!--                    <h2>-->
-<!--                        <a href="--><?php //the_permalink() ?><!--" rel="bookmark" title="Permanent Link to --><?php //the_title_attribute(); ?><!--">-->
-<!--                            --><?php //the_title(); ?>
-<!--                        </a>-->
-<!--                    </h2>-->
-<!--                    <p><small>--><?php //the_time( 'd-m-Y' ); ?><!-- by --><?php //the_author_posts_link(); ?><!--</small></p>-->
-<!--                </div>-->
-<!---->
-<!--            </article>-->
-<!---->
-<!--        --><?php //endwhile; ?>
-<!--    --><?php //endif; ?>
-<!---->
-<!--</div>-->
-<!---->
-<?php //get_footer(); ?>
+<?php get_header(); ?>
+
+<div class="recipes container">
+    <div class="content">
+        <?php if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
+
+                <article>
+                    <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+                        <div class="thumbnail">
+
+                            <div class="img">
+                                <?php the_post_thumbnail(); ?>
+                            </div>
+
+                            <div class="caption">
+                                <h3>
+                                    <?php the_title(); ?>
+                                </h3>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
+</div>
+
+<?php get_footer(); ?>

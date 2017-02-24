@@ -155,6 +155,7 @@ function ingredient_save_meta($post_id)
         add_post_meta($post_id, 'ingredient', $valuePost);
     }
     add_action('admin_menu', 'my_theme_customizer');
+
 }
 
 function my_theme_customizer()
@@ -166,6 +167,7 @@ function my_theme_customizer()
         'customize.php'
     );
 }
+
 
 function getTweets($username = false, $count = 10, $options = false)
 {

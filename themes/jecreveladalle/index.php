@@ -46,6 +46,7 @@ $loop = new WP_Query( array( 'post_type' => 'Recettes', 'posts_per_page' => 10 )
         <?php endwhile; ?>
 
     </div>
+    </div>
 <?php
 
 get_footer();

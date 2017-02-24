@@ -6,7 +6,7 @@
 * What could go wrong?
 */
 if (!class_exists('TwitterOAuth')) {
-    require_once('/wamp64/www/jecreve/wp-content/themes/jecreveladalle/oauth/TwitterAuth.php');
+    require_once('/Users/adrienpayen/Documents/school/Cms/wordpress/wp-content/themes/jecreveladalle/oauth/twitterauth.php');
 } else {
     define('TFD_USING_EXISTING_LIBRARY_TWITTEROAUTH',true);
 }

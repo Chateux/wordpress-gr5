@@ -1,7 +1,9 @@
-.carousel{
+.background{
   height: 30vh;
   overflow: hidden;
   margin-bottom: 2em;
+  background: url('img/1_food.jpg');
+  background-size: cover;
 
   img{
     width: 100%;

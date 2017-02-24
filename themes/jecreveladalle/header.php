@@ -24,11 +24,10 @@
         </div>
 
         <div class="collapse navbar-collapse">
-<!---->
-<!--                    --><?php
-//                    get_search_form();
-//                    ?>
 
+                    <?php
+                    get_search_form();
+                    ?>
 
             <?php wp_nav_menu( array( 'theme_location' => 'main_menu', 'menu_class' => 'nav navbar-nav navbar-right' ) ); ?>
 
